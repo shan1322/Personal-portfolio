@@ -448,7 +448,7 @@ const PASS = '1234';
 
 // ── CASE STUDIES ──
 (function() {
-  const STORAGE_KEY = 'portfolio-cases';
+  const STORAGE_KEY = 'portfolio-cases-v2';
   const app = document.getElementById('case-app');
   const toolbar = document.getElementById('case-toolbar');
   const unlockBtn = document.getElementById('case-unlock-btn');
@@ -458,10 +458,7 @@ const PASS = '1234';
   const panelContent = document.getElementById('case-panel-content');
 
   const DEFAULTS = [
-    { id:'c1', num:'01', tag:'Agentic AI · Product Strategy', title:'North Star Metric for a Self-Improving Agent System', problem:'How do you define success for an AI agent designed to improve itself — with no fixed ground truth to measure against?', approach:'', outcome:'Single composite metric adopted as the team\'s primary eval signal across 3 live agent workflows', learnings:'', role:'Lead PM', company:'LenDenClub R&D' },
-    { id:'c2', num:'02', tag:'LLM Cost Optimisation', title:'Model Elbow Analysis  Finding the Cost-Quality Inflection Point', problem:'Enterprise LLM spend was scaling linearly while quality gains were plateauing — a classic misread of the cost-performance curve.', approach:'', outcome:'Gemini Flash identified as the elbow; projected 40% cost reduction at equivalent quality', learnings:'', role:'PM / Analyst', company:'LenDenClub' },
-    { id:'c3', num:'03', tag:'Competitive Research · Build vs. Buy', title:'Agentic AI Customer Support — Market Landscape', problem:'Should LenDenClub build or buy? Needed a structured view across Intercom Fin, Ada, Forethought, Zendesk, and Salesforce Agentforce.', approach:'', outcome:'Build recommendation adopted with 5-vendor analysis and differentiation map', learnings:'', role:'PM Research', company:'LenDenClub R&D' },
-    { id:'c4', num:'04', tag:'System Design · Technical PM', title:'Production RAG Architecture Critique', problem:'A proposed RAG system had three silent failure modes invisible until production load.', approach:'', outcome:'3 architectural risks surfaced and redesign adopted before engineering handoff', learnings:'', role:'Technical PM', company:'LenDenClub R&D' }
+    { id:'c1', num:'01', tag:'Market Research · Agentic AI', title:'Agentic Customer Support: Competitive Landscape', problem:'Needed benchmark for agentic email support system before scaling. No internal reference for resolution rate, cost/ticket, deployment timelines. Unclear how LenDenClub\'s AI handling rate (60%) compares to market.', approach:'Surveyed 5+ agentic CS vendors (Fini, Decagon, Intercom Fin, Revdev, Bill\'s platform). Compared tech stack, pricing model, resolution metrics, channel coverage. Pulled sector-level data (market size, CSAT benchmarks, deflection rates). Cross-referenced BCG, Zendesk, Salesforce industry reports.', outcome:'Industry 90th percentile resolution rate benchmark: ~76-90%. Median tier-1 deflection: 41.2%, top quartile 58.7%. Cost reference: $0.69-$0.99 per resolution. POC timeline reference: 8-12 weeks; production-ready: 20-30 weeks. Positioned LenDenClub\'s 60% AI handling rate against these benchmarks.', learnings:'Resolution rate definitions vary by vendor (not apples-to-apples). Voice is fastest-growing channel (6% → 19% in 2 years). Pure-AI CSAT still trails human (4.10 vs 4.30/5); hybrid closes gap to 0.05. Self-improving/"dreaming" architectures show compounding resolution gains. P&L impact still unproven for most.', role:'Product (AI/R&D), Management Trainee', company:'LenDenClub (Vartis Platforms)' }
   ];
 
   let state = loadState();
@@ -606,15 +603,14 @@ const PASS = '1234';
 
 // ── WRITING ──
 (function() {
-  const STORAGE_KEY = 'portfolio-writing';
+  const STORAGE_KEY = 'portfolio-writing-v2';
   const app = document.getElementById('writing-app');
   const toolbar = document.getElementById('writing-toolbar');
   const unlockBtn = document.getElementById('writing-unlock-btn');
 
   const DEFAULTS = [
-    { id:'w1', tag:'LLMs · Evaluation', title:'Picking the Right LLM', desc:'How to evaluate models before you build  latency, cost, quality, and the tradeoffs most teams miss.', url:'' },
-    { id:'w2', tag:'AI Evaluation · Golden Sets', title:'LLM as a Judge', desc:"Building golden evaluation sets for reliable AI assessment  why vibe-checking doesn't scale.", url:'' },
-    { id:'w3', tag:'Agentic AI · Testing', title:'Scenario Testing for AI Agents', desc:'How to stress-test agentic workflows before production  adversarial inputs and failure modes.', url:'' }
+    { id:'w1', tag:'LLM Evaluation · AI Engineering', title:'How Do We Know If Our AI Is Actually Right?', desc:'You built an LLM product. It\'s generating responses. But how do you actually know if the outputs are good? Using LLM as a Judge, 3 judging modes, golden vs benchmark sets, and evaluation biases.', url:'https://shantanusblog.substack.com/p/how-do-we-know-if-our-ai-is-actually' },
+    { id:'w2', tag:'Agentic AI · Model Selection', title:'Picking the right model for agent workflows', desc:'Don\'t chase the "smartest model" headline. Pick a metric that matches your task (e.g., GDPval). Plot cost vs accuracy. Find the elbow where extra cost stops buying meaningful accuracy. Stop overpaying.', url:'https://www.linkedin.com/feed/update/urn:li:activity:7474485276317331456/' }
   ];
 
   let state = loadState();
